@@ -7,29 +7,29 @@
 			string result = number.ToString();
 
             // your solution/implementation should go in here
-            if (i == 0)
+            if (number == 0)
             {
-                output = "0";
+                result = "0";
             }
-            else if (i % 3 == 0 && i % 5 == 0)
+            else if (number % 3 == 0 && number % 5 == 0)
             {
-                output = "FizzBuzz";
+                result = "FizzBuzz";
             }
-            else if (i % 5 == 0)
+            else if (number % 5 == 0)
             {
-                output = "Buzz";
+                result = "Buzz";
             }
-            else if (i % 3 == 0)
+            else if (number % 3 == 0)
             {
 
-                output = "Fizz";
+                result = "Fizz";
             }
             else
             {
-                output = i.ToString();
+                result = number.ToString();
             }
 
-            return output;
+          
             return result;
 		}
 	}
