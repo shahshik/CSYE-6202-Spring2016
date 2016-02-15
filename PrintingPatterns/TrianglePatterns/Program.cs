@@ -50,7 +50,7 @@ namespace TrianglePatterns
             }
                Console.ReadLine();
            
-         }
+          }
     
 
 
