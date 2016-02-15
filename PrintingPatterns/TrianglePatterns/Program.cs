@@ -16,23 +16,81 @@ namespace TrianglePatterns
 
 		static void DisplayPatternA()
 		{
-			// your implementation here
-            ///I amm changing
-		}
+            int i, j;
+            i = 0;
+            j = 0;
 
-		static void DisplayPatternB()
-		{
-			// your implementation here
-		}
+            for (i = 1; i <= 10; i++)
+            {
+                for (j = 1; j <= i; j++)
+                {
+                    Console.Write("*");
+                }
+                Console.Write("\n");
+            }
+            Console.ReadLine();
+        
+       }
+
+        static void DisplayPatternB()
+        {
+
+            int i, j, k;
+            for (i = 1; i <= 10; i++)
+            {
+                for (j = 1; j <= 10 - i; j++)
+                {
+                     Console.Write("");
+                }
+                for (k = 1; k <= j; k++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine("");
+            }
+               Console.ReadLine();
+           
+         }
+    
+
 
 		static void DisplayPatternC()
 		{
-			// your implementation here
-		}
+
+            int i, j, k;
+            for (i = 10; i >= 1; i--)
+            {
+                for (j = 1; j <= 10 -i; j++)
+                {
+                   Console.Write(" ");
+                }
+                for (k = 1; k <= i; k++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine(" ");
+            }
+            Console.ReadLine();
+
+        }
 
 		static void DisplayPatternD()
 		{
-			// your implementation here
-		}
+            int i, j, k;
+            for (i = 1; i <= 10; i++)
+            {
+                for (j = 1; j <= 10 - i; j++)
+                {
+                    Console.Write(" ");
+                }
+                for (k = 1; k <= i; k++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine("");
+            }
+            Console.ReadLine();
+
+        }
 	}
 }
