@@ -1,0 +1,7 @@
+H:\C# Assignments\Simple Payroll\Simple Payroll\bin\Debug\Simple Payroll.exe.config
+C:\Users\NARESH SHAH\Source\Repos\CSYE-6202-Spring2016\Simple Payroll\Simple Payroll\bin\Debug\Simple Payroll.exe.config
+C:\Users\NARESH SHAH\Source\Repos\CSYE-6202-Spring2016\Simple Payroll\Simple Payroll\bin\Debug\Simple Payroll.exe
+C:\Users\NARESH SHAH\Source\Repos\CSYE-6202-Spring2016\Simple Payroll\Simple Payroll\bin\Debug\Simple Payroll.pdb
+C:\Users\NARESH SHAH\Source\Repos\CSYE-6202-Spring2016\Simple Payroll\Simple Payroll\obj\Debug\Simple Payroll.csprojResolveAssemblyReference.cache
+C:\Users\NARESH SHAH\Source\Repos\CSYE-6202-Spring2016\Simple Payroll\Simple Payroll\obj\Debug\Simple Payroll.exe
+C:\Users\NARESH SHAH\Source\Repos\CSYE-6202-Spring2016\Simple Payroll\Simple Payroll\obj\Debug\Simple Payroll.pdb
