@@ -38,6 +38,8 @@ namespace GasPump
                 GasType gType = GasTypeMapper(a.ToCharArray()[0]);
                 Console.WriteLine("You bought " + b +  "gallons of " + gType + " at " + GasPriceMapper(gType));
 
+
+
             }
             Console.ReadLine();
             goto program;
