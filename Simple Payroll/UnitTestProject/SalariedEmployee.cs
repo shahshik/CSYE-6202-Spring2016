@@ -14,5 +14,11 @@
             this.v3 = v3;
             this.weeklysalary = weeklysalary;
         }
+
+        public double earnings()
+        {
+            return this.weeklysalary;
+        }
+
     }
 }
