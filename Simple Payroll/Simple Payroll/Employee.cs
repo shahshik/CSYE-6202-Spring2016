@@ -22,7 +22,13 @@ namespace Simple_Payroll
 
         public abstract double earnings();
 
+        public override string ToString()
+        {
+            return string.Format("{0} {1}\nsocial security number: {2}",
+                firstName, lastName, ssn);
+        }
 
-        
+
+
     }
 }
