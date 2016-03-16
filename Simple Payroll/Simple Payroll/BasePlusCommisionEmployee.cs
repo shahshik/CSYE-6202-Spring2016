@@ -37,9 +37,10 @@ namespace Simple_Payroll
 
         public override string ToString()
         {
-            return string.Format("{0}: {1}\n{2}: {3:C}\n{4}",
-                "Base-Salaried", base.ToString(),
-                "Base Salary", BaseSalary);
+            return string.Format("{0}: {1}\n{2}: {3:C}\n{4}: {5:C}\n{6}: {7:F2}",
+                "Base Plus Commision employee", base.ToString(),
+                "gross sales", GrossSales, "commission rate", CommissionRate,"Base Salary", BaseSalary);
+         
 
         }
 

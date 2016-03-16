@@ -46,27 +46,26 @@ namespace Simple_Payroll
                 if (value > 0)
                     hours = value;
                 else
-                    throw new ArgumentOutOfRangeException("Hours", value, "Hours must be greater than 0")
-             }
+                    throw new ArgumentOutOfRangeException("Hours", value, "Hours must be greater than 0");
+            }
         }
 
         public override double earnings()
         {
-            if (hours <= 40) 
-               return wage * hours;
-           else                                                             
-              return 40 * wage + (hours - 40) * wage * 1.5;
-        }           
-    
+            if (hours <= 40)
+                return wage * hours;
+            else
+                return 40 * wage + (hours - 40) * wage * 1.5;
+        }
+
 
         public override string ToString()
         {
-            return string.Format("{0}: {1}\n{2}: {3:C}\n{4}",
-                "Hourly employee", base.ToString(),
-                "Hourly Wage", wage, "Hours worked", hours);
+            return string.Format("hourly employee: {0}\n{1}: {2:C}: {3}: {4:F2}",
+                base.ToString(), "Hourly Wage", wage, "Hours worked", hours);
 
         }
     }
-    
-    
+
+
 }

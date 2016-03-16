@@ -46,12 +46,13 @@ namespace Simple_Payroll
                 if (value > 0 && value < 1)
                     commissionRate = value;
                 else
-                    throw new ArgumentOutOfRangeException("CommissionRate", value, "Commission must be >0 and < 1")
+                    throw new ArgumentOutOfRangeException("CommissionRate", value, "Commission must be >0 and < 1");
              }
         }
 
         public override double earnings()
         {
+           
             return CommissionRate * GrossSales;
         }
 

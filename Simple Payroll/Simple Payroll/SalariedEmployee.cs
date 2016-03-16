@@ -40,9 +40,10 @@ namespace Simple_Payroll
 
         public override string ToString()
         {
-            return string.Format("{0}: {1}\n{2}: {3:C}\n{4}",
-                "Salaried Employee", base.ToString(),
-                "Weekly Salary", WeeklySalary);
+            return string.Format("{0}: {1:C}\n{2}",
+               "Salaried Employee", base.ToString(), "Weekly Salary", WeeklySalary);
+             
+        
 
         }
 
