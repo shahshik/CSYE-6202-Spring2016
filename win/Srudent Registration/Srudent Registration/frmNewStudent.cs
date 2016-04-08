@@ -17,7 +17,8 @@ namespace Srudent_Registration
         {
             InitializeComponent();
             button1.Enabled = false;
-            button2.Enabled = true;
+            button2.Enabled = false;
+            LoadDepartments();
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -31,6 +32,11 @@ namespace Srudent_Registration
 
 
         }
+        private void LoadDepartments()
+        {
+            cmbDepartment.Items.AddRange(new[] { "Information Systems", "International Affairs", "Nursing", "Pharmacy",
+                "Professional Studies", "Psychology", "Public Administration" });
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {   
@@ -43,9 +49,14 @@ namespace Srudent_Registration
                 value = btnPartTime.Text;
             if(string.IsNullOrWhiteSpace(txtStudentId.Text) || string.IsNullOrWhiteSpace(txtFirstName.Text) || string.IsNullOrWhiteSpace(txtLastName.Text) || string.IsNullOrWhiteSpace(cmbDepartment.Text) || string.IsNullOrWhiteSpace(value))
             {
-                frmNewStudentRegistrationWarning Check = new frmNewStudentRegistrationWarning();
-                Check.Show();
-                Hide();
+                var confirmResult = MessageBox.Show("Please fill in all the fields","Please fill in all the fields",MessageBoxButtons.OK);
+                  if (confirmResult == DialogResult.OK)
+                   {
+                    //frmNewStudent n1 = new frmNewStudent();
+                    //n1.Show();
+                    return;
+                   }
+                
             }
             Student s1 = new Student(txtStudentId.Text, txtFirstName.Text, txtLastName.Text, cmbDepartment.Text
                 , value);
@@ -57,16 +68,46 @@ namespace Srudent_Registration
 
         private void button2_Click(object sender, EventArgs e)
         {
-            txtStudentId.Clear();
-            txtFirstName.Clear();
-            txtLastName.Clear();
-            cmbDepartment.Items.Clear();
+            
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            txtStudentId.Text = "";
+            txtFirstName.Text = "";
+            txtLastName.Text = "";
+            cmbDepartment.SelectedIndex = -1;
             btnFullTime.Checked = false;
             btnPartTime.Checked = false;
             txtStudentId.Focus();
 
+
         }
 
+        private void txtStudentId_TextChanged(object sender, EventArgs e)
+        {
+            button1.Enabled = true;
+            button2.Enabled = true;
 
+        }
+
+        private void txtFirstName_TextChanged(object sender, EventArgs e)
+        {
+            button1.Enabled = true;
+            button2.Enabled = true;
+        }
+
+        private void txtLastName_TextChanged(object sender, EventArgs e)
+        {
+            button1.Enabled = true;
+            button2.Enabled = true;
+        }
+
+        private void cmbDepartment_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            button1.Enabled = true;
+            button2.Enabled = true;
+        }
     }
 }

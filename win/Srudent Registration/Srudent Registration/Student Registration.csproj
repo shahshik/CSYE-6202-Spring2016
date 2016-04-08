@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEdit.Designer.cs">
+      <DependentUpon>frmEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,12 +63,6 @@
     </Compile>
     <Compile Include="frmNewStudent.Designer.cs">
       <DependentUpon>frmNewStudent.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmNewStudentRegistrationWarning.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmNewStudentRegistrationWarning.Designer.cs">
-      <DependentUpon>frmNewStudentRegistrationWarning.cs</DependentUpon>
     </Compile>
     <Compile Include="frmRegistration.cs">
       <SubType>Form</SubType>
@@ -76,12 +76,6 @@
     <Compile Include="frmRemove.Designer.cs">
       <DependentUpon>frmRemove.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRemoveWarning.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmRemoveWarning.Designer.cs">
-      <DependentUpon>frmRemoveWarning.cs</DependentUpon>
-    </Compile>
     <Compile Include="IModel.cs" />
     <Compile Include="IStudentRegistrationForm.cs" />
     <Compile Include="IView.cs" />
@@ -90,21 +84,18 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StudentRegistration.Domain\Student.cs" />
+    <EmbeddedResource Include="frmEdit.resx">
+      <DependentUpon>frmEdit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx" />
     <EmbeddedResource Include="frmNewStudent.resx">
       <DependentUpon>frmNewStudent.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmNewStudentRegistrationWarning.resx">
-      <DependentUpon>frmNewStudentRegistrationWarning.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegistration.resx">
       <DependentUpon>frmRegistration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRemove.resx">
       <DependentUpon>frmRemove.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmRemoveWarning.resx">
-      <DependentUpon>frmRemoveWarning.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

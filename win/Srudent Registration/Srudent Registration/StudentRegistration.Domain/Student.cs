@@ -13,7 +13,7 @@ namespace Srudent_Registration.StudentRegistration.Domain
         public string LastName { get; set; }
         public string Department { get; set; }
         public string EnrollmentType { get; set; }
-
+        public static List<Student> mockStudentList;
         public Student(string studentId, string firstName, string lastName, string department,string enrollmentType)
         {
             StudentID = studentId;
@@ -21,6 +21,10 @@ namespace Srudent_Registration.StudentRegistration.Domain
             LastName = lastName;
             Department = department;
             EnrollmentType = enrollmentType;
+        }
+
+        public Student()
+        {
         }
 
         public override string ToString()
