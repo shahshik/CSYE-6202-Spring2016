@@ -1,12 +1,21 @@
-﻿<Window x:Class="WpfApplication_Student.MainWindow"
+﻿<Window x:Name="frmLogin1" x:Class="WpfApplication_Student.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApplication_Student"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="512.647" Width="802.941" FontSize="20">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="377*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition x:Name="frmLogin" Width="414*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="label" Content="Username" HorizontalAlignment="Left" Margin="173,90,0,0" VerticalAlignment="Top" Width="135" FontSize="20"/>
+        <Button x:Name="button" Content="Sign" HorizontalAlignment="Left" Margin="51,350,0,0" VerticalAlignment="Top" Width="120" Height="24" Grid.Column="2" Click="button_Click"/>
+        <Label x:Name="label1" Content="Password" HorizontalAlignment="Left" Margin="173,187,0,0" VerticalAlignment="Top" Height="40" RenderTransformOrigin="1.41,1.549" FontSize="20" Width="105"/>
+        <TextBox x:Name="txtUsername" HorizontalAlignment="Left" Height="23" Margin="51,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="2"/>
+        <TextBox x:Name="txtPassword" HorizontalAlignment="Left" Height="23" Margin="51,213,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="2"/>
     </Grid>
 </Window>
