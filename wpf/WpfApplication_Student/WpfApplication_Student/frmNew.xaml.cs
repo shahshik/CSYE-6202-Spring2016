@@ -19,9 +19,38 @@ namespace WpfApplication_Student
     /// </summary>
     public partial class frmNew : Window
     {
-        public frmNew()
+        private List<Student> studentList;
+        private string[] departmentNames;
+        private bool isChanged = false;
+        public frmNew(List<Student> studentList, string[] departmentName)
         {
             InitializeComponent();
+            this.studentList = studentList;
+            this.departmentNames = departmentName;
+            LoadDepartments();
+            btnFullTime.IsChecked = true;
+            cmbDepartment.SelectedIndex = -1;
+            if (isChanged)
+            {
+                btnAdd.IsEnabled = true;
+                btnReset.IsEnabled = true;
+            }
+            else
+            {
+                btnAdd.IsEnabled = false;
+                btnReset.IsEnabled = false;
+            }
+
+        }
+        private void LoadDepartments()
+        {
+            cmbDepartment.Items.Add(new[] { "Information Systems", "International Affairs", "Nursing", "Pharmacy",
+                "Professional Studies", "Psychology", "Public Administration" });
+        }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
