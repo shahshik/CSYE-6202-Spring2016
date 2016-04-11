@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
@@ -42,15 +43,35 @@ namespace WpfApplication_Student
         }
         private void LoadDataGridWithMockData()
         {
-            var mockStudentList1 = new List<Student>()
-            {
-                new Student("111-11-1212","Bart","Simpson","Information Systems","Full Time"),
-                new Student("123-12-1234","Maggie","Simpson","International Affairs","Part Time"),
-            };
+            // var mockStudentList1 = new List<Student>()
+            //{
+            //  new Student("111-11-1212","Bart","Simpson","Information Systems","Full Time"),
+            // new Student("123-12-1234","Maggie","Simpson","International Affairs","Part Time"),
+            //};
 
-            var bindingList = new BindingList<Student>(mockStudentList1);
+            //var bindingList = new BindingList<Student>(mockStudentList1);
             //var source = new B(bindingList, null);
-            dataGridViewStudents.DataContext = bindingList;
+            //dataGridViewStudents.DataContext = bindingList;
+
+            string[] studentId = new string[10];
+            for (int i = 0; i < 10; i++)
+            {
+                string randomId = RandomGenerator.RandomStudentId();
+                int position = Array.IndexOf(studentId, randomId);
+                while (position > -1)
+                {
+                    randomId = RandomGenerator.RandomStudentId();
+                    position = Array.IndexOf(studentId, randomId);
+                }
+                studentId[i] = randomId;
+            }
+            for (int i = 0; i < 10; i++)
+            {
+                randomStudentList.Add(new Student(studentId[i], RandomGenerator.randomFirstName(), RandomGenerator.randomLastName(), RandomGenerator.randomDepartment(), RandomGenerator.enrollmentType()));
+            }
+            ObservableCollection<Student> list = new ObservableCollection<Student>(randomStudentList);
+            dataGridViewStudents.ItemsSource = null;
+            dataGridViewStudents.ItemsSource = list;
 
         }
 
@@ -95,19 +116,11 @@ namespace WpfApplication_Student
         private void button_Click(object sender, RoutedEventArgs e)
         {
             frmNew f1 = new frmNew(randomStudentList, departmentNames);
-            nsr.ShowDialog();
+            f1.ShowDialog();
             ObservableCollection<Student> list = new ObservableCollection<Student>(randomStudentList);
-            RandomDataGrid.ItemsSource = null;
-            RandomDataGrid.ItemsSource = list;
-            comboBoxDeptt.SelectedIndex = 0;
-            radioFull.IsEnabled = false;
-            txtStudentId.IsEnabled = false;
-            comboBoxDeptt.IsEnabled = false;
-            txtFirst.IsEnabled = false;
-            txtLast.IsEnabled = false;
-            radioPart.IsEnabled = false;
-            radioFull.IsChecked = false;
-            radioPart.IsChecked = false;
+            dataGridViewStudents.ItemsSource = null;
+            dataGridViewStudents.ItemsSource = list;
+            LoadDefaults();
         }
 
         private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -122,26 +135,39 @@ namespace WpfApplication_Student
 
         private void btnEdit_Click(object sender, RoutedEventArgs e)
         {
-            Student student = (Student)dataGridViewStudents.SelectedItem;
-            //s1.StudentID = (dataGridViewStudents.SelectedItem).Row["Id"].ToString();
-            //s1.FirstName = dataGridViewStudents.SelectedRows[0].Cells[1].Value.ToString();
-            //s1.LastName = dataGridViewStudents.SelectedRows[0].Cells[2].Value.ToString();
-            //s1.Department = dataGridViewStudents.SelectedRows[0].Cells[3].Value.ToString();
-            //s1.EnrollmentType = dataGridViewStudents.SelectedRows[0].Cells[4].Value.ToString();
-            frmEdit f2 = new frmEdit(student);
-            f2.Show();
+            Student selectedStudent = dataGridViewStudents.SelectedItem as Student;
+            if (selectedStudent != null)
+            {
+                frmEdit r1 = new frmEdit(selectedStudent, randomStudentList, departmentNames);
+                r1.ShowDialog();
+                ObservableCollection<Student> list = new ObservableCollection<Student>(randomStudentList);
+                dataGridViewStudents.ItemsSource = null;
+                dataGridViewStudents.ItemsSource = list;
+                LoadDefaults();
+            }
+            else
+            {
+                MessageBox.Show("Please select a student to edit from the list", "Student Update Warning");
+            }
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            s1.StudentID = dataGridViewStudents.SelectedRows[0].Cells[0].Value.ToString();
-            s1.FirstName = dataGridViewStudents.SelectedRows[0].Cells[1].Value.ToString();
-            s1.LastName = dataGridViewStudents.SelectedRows[0].Cells[2].Value.ToString();
-            s1.Department = dataGridViewStudents.SelectedRows[0].Cells[3].Value.ToString();
-            s1.EnrollmentType = dataGridViewStudents.SelectedRows[0].Cells[4].Value.ToString();
+            Student selectedStudent = dataGridViewStudents.SelectedItem as Student;
+            if (selectedStudent != null)
+            {
+                frmRemove r = new frmRemove(selectedStudent, randomStudentList);
+                r.ShowDialog();
+                ObservableCollection<Student> list = new ObservableCollection<Student>(randomStudentList);
+                dataGridViewStudents.ItemsSource = null;
+                dataGridViewStudents.ItemsSource = list;
+                LoadDefaults();
+            }
+            else
+            {
+                MessageBox.Show("Please select a student to remove from the list", "Student Remove Warning");
+            }
 
-            frmRemove f = new frmRemove(s1);
-            f.ShowDialog(this);
         }
     }
 }

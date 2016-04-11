@@ -64,6 +64,7 @@
     <Compile Include="frmRemove.xaml.cs">
       <DependentUpon>frmRemove.xaml</DependentUpon>
     </Compile>
+    <Compile Include="RandomGenerator.cs" />
     <Compile Include="Student.cs" />
     <Page Include="frmEdit.xaml">
       <SubType>Designer</SubType>
