@@ -55,7 +55,29 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="frmEdit.xaml.cs">
+      <DependentUpon>frmEdit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmNew.xaml.cs">
+      <DependentUpon>frmNew.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmRemove.xaml.cs">
+      <DependentUpon>frmRemove.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Student.cs" />
+    <Page Include="frmEdit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmNew.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="frmRegistration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmRemove.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
