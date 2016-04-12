@@ -34,7 +34,7 @@ namespace WpfApplication_Student
         {
 
             frmRegistration f = new frmRegistration();
-            if (txtUsername.Text == "demouser" && passwordBox.Password == "demopassword")
+            if (txtUsername.Text == "demouser" && passwordBox.Password == "demo")
             {
 
                 logattempt = 0;
