@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -19,56 +20,91 @@ namespace WpfApplication_Student
     /// </summary>
     public partial class frmEdit : Window
     {
-        Student s1;
-        String v;
-        public frmEdit(Student s)
+
+        private Student student;
+        private List<Student> studentList;
+        private string[] departmentNames;
+        public frmEdit(Student s, List<Student> students, string[] depttNames)
         {
             InitializeComponent();
-            s1 = s;
-            txtStudentId.Text = s1.StudentID;
-            txtFirstName.Text = s1.FirstName;
-            txtLastName.Text = s1.LastName;
-            cmbDepartment.Text = s1.Department;
-            v = s1.EnrollmentType;
-            if (v.Equals("Part Time"))
+            this.student = s;
+            this.studentList = students;
+            this.departmentNames = depttNames;
+            txtStudentId.Text = student.StudentID;
+            txtFirstName.Text = student.FirstName;
+            txtLastName.Text = student.LastName;
+            cmbDepartment.Text = student.Department;
+            LoadDepartments();
+            string dept = student.Department;
+            cmbDepartment.SelectedIndex = 0;
+            if (btnFullTime.Content.Equals(student.EnrollmentType))
             {
-                btnPartTime.IsChecked = true;
+                btnFullTime.IsChecked = true;
             }
             else
             {
-
-                btnFullTime.IsChecked = true;
+                btnPartTime.IsChecked = true;
             }
+            for (int i = 0; i < departmentNames.Count(); i++)
+            {
+                if (departmentNames[i].Equals(dept))
+                {
+                    cmbDepartment.SelectedIndex = i;
+                    break;
+                }
+            }
+        }
+        private void LoadDepartments()
+        {
+            cmbDepartment.Items.Add(new[] { "Information Systems", "International Affairs", "Nursing", "Pharmacy",
+                "Professional Studies", "Psychology", "Public Administration" });
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            string value1 = "";
-            bool chk = btnFullTime.GetValue(true);
-            if (chk)
-                value1 = btnFullTime.Text;
-            else
-                value1 = btnPartTime.Text;
-            if (string.IsNullOrWhiteSpace(txtStudentId.Text) || string.IsNullOrWhiteSpace(txtFirstName.Text) || string.IsNullOrWhiteSpace(txtLastName.Text) || string.IsNullOrWhiteSpace(cmbDepartment.Text) || string.IsNullOrWhiteSpace(value))
+            string studentId = txtStudentId.Text;
+            string firstName = txtFirstName.Text;
+            string lastName = txtLastName.Text;
+            if (studentId == "" || studentId.Trim().Equals("") || firstName == "" || firstName.Trim().Equals("") || lastName == "" || lastName.Trim().Equals(""))
             {
-                var confirmResult = MessageBox.Show("Please fill in all the fields", "Please fill in all the fields", MessageBoxButtons.OK);
-                if (confirmResult == DialogResult.OK)
+                MessageBox.Show("Please fill in all the fields", "Edit Student Warning Page", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+            else
+            {
+                string enrollmentType;
+                if ((bool)btnFullTime.IsChecked)
                 {
-                    this.Show();
+                    enrollmentType = "Full Time";
                 }
+                else enrollmentType = "Part Time";
+                if (Regex.IsMatch(studentId, @"^\d{3}-\d{2}-\d{4}$") && Regex.IsMatch(firstName, @"^[A-Za-z]+$") && Regex.IsMatch(firstName, @"^[A-Za-z]+$"))
+                {
+                    MessageBoxResult warning = MessageBox.Show("Are you sure you want to update this student?", "Edit Student Warning Page", MessageBoxButton.YesNo, MessageBoxImage.Information);
+                    if (warning == MessageBoxResult.Yes)
+                    {
+                        student.StudentID = studentId;
+                        student.FirstName = firstName;
+                        student.LastName = lastName;
+                        student.Department = cmbDepartment.Text;
+                        student.EnrollmentType = enrollmentType;
+                        this.Close();
+                    }
+                    else if (warning == MessageBoxResult.No)
+                    {
+                        this.Close();
+                    }
 
+                }
+                else
+                {
+                    MessageBox.Show("Invalid format!!", "New Student Warning Page", MessageBoxButton.OK, MessageBoxImage.Warning);
+                }
             }
-            var confirmResult1 = MessageBox.Show("Are you sure you want to update this student", "Are you sure you want to update this student?", MessageBoxButtons.YesNo);
-            if (confirmResult1 == DialogResult.Yes)
-            {
-                Student s2 = new Student(txtStudentId.Text, txtFirstName.Text, txtLastName.Text, cmbDepartment.Text, value);
-                //Student.mockStudentList.Add(s2);
-                this.Close();
-            }
-            else
-            {
-                this.Close();
-            }
+        }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }
