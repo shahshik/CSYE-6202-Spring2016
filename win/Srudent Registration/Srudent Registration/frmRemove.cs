@@ -13,18 +13,20 @@ namespace Srudent_Registration
 {
     public partial class frmRemove : Form
     {
-        Student s1;
-        String v;
-        public frmRemove(Student s)
+        private Student student;
+        private List<Student> studentList;
+        private string v;
+        public frmRemove(Student s, List<Student> sl)
         {
-
+            this.student = s;
+            this.studentList = sl;
             InitializeComponent();
-            s1 = s;
-            txtStudentId.Text = s1.StudentID;
-            txtFirstName.Text = s1.FirstName;
-            txtLastName.Text = s1.LastName;
-            cmbDepartment.Text = s1.Department;
-            v = s1.EnrollmentType;
+            student = s;
+            txtStudentId.Text = student.StudentID;
+            txtFirstName.Text = student.FirstName;
+            txtLastName.Text = student.LastName;
+            cmbDepartment.Text = student.Department;
+            v = student.EnrollmentType;
             if(v.Equals("Part Time"))
             {
                 btnPartTime.Checked = true;
@@ -49,7 +51,7 @@ namespace Srudent_Registration
             var confirmResult = MessageBox.Show("Are you sure you want to remove this student", "Are you sure you want to remove this student?", MessageBoxButtons.YesNo);
             if (confirmResult == DialogResult.Yes)
             {
-                //Student.mockStudentList.Remove(s1);
+                studentList.Remove(student);
                 this.Close();
             }
             else

@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -13,6 +14,8 @@ namespace Srudent_Registration
 {
     public partial class frmNewStudent : Form
     {
+        private List<Student> studentList;
+        private string[] departmentNames;
         public frmNewStudent()
         {
             InitializeComponent();
@@ -34,36 +37,44 @@ namespace Srudent_Registration
         }
         private void LoadDepartments()
         {
-            cmbDepartment.Items.AddRange(new[] { "Information Systems", "International Affairs", "Nursing", "Pharmacy",
-                "Professional Studies", "Psychology", "Public Administration" });
+            departmentNames = new[] { "Information Systems", "International Affairs", "Nursing", "Pharmacy", "Professional Studies", "Psychology", "Public Administration" };
+            cmbDepartment.Items.AddRange(departmentNames);
+        }
+        public void GetStudentList(List<Student> studentList)
+        {
+            this.studentList = studentList;
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {   
-            
-            string value = "";
-            bool isChecked = btnFullTime.Checked;
-            if (isChecked)
-                value = btnFullTime.Text;
-            else
-                value = btnPartTime.Text;
-            if(string.IsNullOrWhiteSpace(txtStudentId.Text) || string.IsNullOrWhiteSpace(txtFirstName.Text) || string.IsNullOrWhiteSpace(txtLastName.Text) || string.IsNullOrWhiteSpace(cmbDepartment.Text) || string.IsNullOrWhiteSpace(value))
-            {
-                var confirmResult = MessageBox.Show("Please fill in all the fields","Please fill in all the fields",MessageBoxButtons.OK);
-                  if (confirmResult == DialogResult.OK)
-                   {
-                    //frmNewStudent n1 = new frmNewStudent();
-                    //n1.Show();
-                    return;
-                   }
-                
-            }
-            Student s1 = new Student(txtStudentId.Text, txtFirstName.Text, txtLastName.Text, cmbDepartment.Text
-                , value);
-            var mockStudentList = new List<Student>();
-            mockStudentList.Add(s1);
+        {
 
-            this.Close();
+            string studentId = txtStudentId.Text;
+            string firstName = txtFirstName.Text;
+            string lastName = txtLastName.Text;
+
+            if (studentId == "" || studentId.Trim().Equals("") || firstName == "" || firstName.Trim().Equals("") || lastName == "" || lastName.Trim().Equals(""))
+            {
+                MessageBox.Show("Please fill in all the fields", "New Student Warning Page", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                string enrollmentType;
+                if (btnFullTime.Checked)
+                {
+                    enrollmentType = "Full Time";
+                }
+                else enrollmentType = "Part Time";
+                if (Regex.IsMatch(studentId, @"^\d{3}-\d{2}-\d{4}$") && Regex.IsMatch(firstName, @"^[A-Za-z]+$") && Regex.IsMatch(firstName, @"^[A-Za-z]+$"))
+                {
+                    Student s = new Student(studentId, firstName, lastName, cmbDepartment.Text, enrollmentType);
+                    studentList.Add(s);
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid format of the input!!", "New Student Warning Page", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)

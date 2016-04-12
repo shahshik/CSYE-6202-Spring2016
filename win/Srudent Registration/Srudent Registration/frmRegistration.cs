@@ -13,11 +13,15 @@ namespace Srudent_Registration
 {
     public partial class frmRegistration : Form, IStudentRegistrationForm
     {
-        //public static List<Student> mockStudentList;
+        private List<Student> mockStudentList;
         Student s1 = new Student();
+        private string[] departmentNames;
+
         public event EventHandler DataChanged;
+
         public frmRegistration()
         {
+            mockStudentList = new List<Student>();
             InitializeComponent();
             Init();
             txtStudentId.Enabled = false;
@@ -37,21 +41,40 @@ namespace Srudent_Registration
         }
         private void LoadDepartments()
         {
-            cmbDepartment.Items.AddRange(new[] { "Information Systems", "International Affairs", "Nursing", "Pharmacy",
-                "Professional Studies", "Psychology", "Public Administration" });
+            departmentNames = new[] { "Information Systems", "International Affairs", "Nursing", "Pharmacy", "Professional Studies", "Psychology", "Public Administration" };
+            cmbDepartment.Items.AddRange(departmentNames);
         }
         private void LoadDataGridWithMockData()
         {
-            var mockStudentList1 = new List<Student>()
+            string[] studentId = new string[10];
+            for (int i = 0; i < 10; i++)
             {
-                new Student("111-11-1212","Bart","Simpson","Information Systems","Full Time"),
-                new Student("123-12-1234","Maggie","Simpson","International Affairs","Part Time"),
-            };
+                string randomId = RandomGenerator.RandomStudentId();
+                int position = Array.IndexOf(studentId, randomId);
+                while (position > -1)
+                {
+                    randomId = RandomGenerator.RandomStudentId();
+                    position = Array.IndexOf(studentId, randomId);
+                }
+                studentId[i] = randomId;
+            }
+            for (int i = 0; i < 10; i++)
+            {
+                mockStudentList.Add(new Student(studentId[i], RandomGenerator.randomFirstName(), RandomGenerator.randomLastName(), RandomGenerator.randomDepartment(), RandomGenerator.enrollmentType()));
+            }
+            var bindingList = new BindingList<Student>(mockStudentList);
+            var dataSource = new BindingSource(bindingList, null);
+            dataGridViewStudents.DataSource = dataSource;
+            SetColumnsInDataGrid();
+        }
 
-            var bindingList = new BindingList<Student>(mockStudentList1);
-            var source = new BindingSource(bindingList, null);
-            dataGridViewStudents.DataSource = source;
-
+        public void SetColumnsInDataGrid()
+        {
+            dataGridViewStudents.Columns["StudentID"].DisplayIndex = 0;
+            dataGridViewStudents.Columns["FirstName"].DisplayIndex = 1;
+            dataGridViewStudents.Columns["LastName"].DisplayIndex = 2;
+            dataGridViewStudents.Columns["Department"].DisplayIndex = 3;
+            dataGridViewStudents.Columns["EnrollmentType"].DisplayIndex = 4;
         }
 
         private void LoadDefaults()
@@ -94,12 +117,9 @@ namespace Srudent_Registration
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            s1.StudentID = dataGridViewStudents.SelectedRows[0].Cells[0].Value.ToString();
-            s1.FirstName = dataGridViewStudents.SelectedRows[0].Cells[1].Value.ToString();
-            s1.LastName = dataGridViewStudents.SelectedRows[0].Cells[2].Value.ToString();
-            s1.Department = dataGridViewStudents.SelectedRows[0].Cells[3].Value.ToString();
-            s1.EnrollmentType = dataGridViewStudents.SelectedRows[0].Cells[4].Value.ToString();
-            frmEdit f2 = new frmEdit(s1);
+          
+            Student selectedStudent = (Student)dataGridViewStudents.CurrentRow.DataBoundItem;
+            frmEdit f2 = new frmEdit(selectedStudent, mockStudentList, departmentNames);
             f2.Show();
         }
 
@@ -168,19 +188,9 @@ namespace Srudent_Registration
 
         private void btnRemove_Click(object sender, EventArgs e)
         {
-            //s1.StudentID = dataGridViewStudents.CurrentRow.Cells["Student ID"].Value.ToString();
-            //s1.FirstName = dataGridViewStudents.CurrentRow.Cells["First Name"].Value.ToString();
-            //s1.LastName = dataGridViewStudents.CurrentRow.Cells["Last Name"].Value.ToString();
-            //s1.Department = dataGridViewStudents.CurrentRow.Cells["Department"].Value.ToString();
-            //s1.EnrollmentType = dataGridViewStudents.CurrentRow.Cells["Enrollment Type"].Value.ToString();
 
-            s1.StudentID = dataGridViewStudents.SelectedRows[0].Cells[0].Value.ToString();
-            s1.FirstName = dataGridViewStudents.SelectedRows[0].Cells[1].Value.ToString();
-            s1.LastName = dataGridViewStudents.SelectedRows[0].Cells[2].Value.ToString();
-            s1.Department = dataGridViewStudents.SelectedRows[0].Cells[3].Value.ToString();
-            s1.EnrollmentType = dataGridViewStudents.SelectedRows[0].Cells[4].Value.ToString();
-
-            frmRemove f = new frmRemove(s1);
+            Student selectedStudent = (Student)dataGridViewStudents.CurrentRow.DataBoundItem;
+            frmRemove f = new frmRemove(selectedStudent, mockStudentList);
             f.ShowDialog(this);
         }
     }

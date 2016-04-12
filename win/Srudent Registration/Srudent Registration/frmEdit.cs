@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -13,13 +14,16 @@ namespace Srudent_Registration
 {
     public partial class frmEdit : Form
     {
-        Student s1;
+        private Student s1;
+        private List<Student> studentList;
         String v;
-        public frmEdit(Student s)
+        public frmEdit(Student s, List<Student> s2, string[] depttNames)
         {
+            
+            this.s1 = s;
+            this.studentList = s2;
             InitializeComponent();
-            s1 = s;
-            txtStudentId.Text = s1.StudentID;
+        txtStudentId.Text = s1.StudentID;
             txtFirstName.Text = s1.FirstName;
             txtLastName.Text = s1.LastName;
             cmbDepartment.Text = s1.Department;
@@ -37,6 +41,9 @@ namespace Srudent_Registration
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string studentId = txtStudentId.Text;
+            string firstName = txtFirstName.Text;
+            string lastName = txtLastName.Text;
             string value = "";
             bool isChecked = btnFullTime.Checked;
             if (isChecked)
@@ -52,18 +59,29 @@ namespace Srudent_Registration
                 }
 
             }
-            var confirmResult1 = MessageBox.Show("Are you sure you want to update this student", "Are you sure you want to update this student?", MessageBoxButtons.YesNo);
-            if (confirmResult1 == DialogResult.Yes)
+            if (Regex.IsMatch(studentId, @"^\d{3}-\d{2}-\d{4}$") && Regex.IsMatch(firstName, @"^[A-Za-z]+$") && Regex.IsMatch(firstName, @"^[A-Za-z]+$"))
             {
-                Student s2 = new Student(txtStudentId.Text, txtFirstName.Text, txtLastName.Text, cmbDepartment.Text, value);
-                //Student.mockStudentList.Add(s2);
-                this.Close();
+                DialogResult warning = MessageBox.Show("Are you sure you want to update this student?", "Edit Student Warning Page", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (warning == DialogResult.Yes)
+                {
+                    s1.StudentID = studentId;
+                    s1.FirstName = firstName;
+                    s1.LastName = lastName;
+                    s1.Department = cmbDepartment.Text;
+                    s1.EnrollmentType = value;
+                    this.Close();
+                }
+                else if (warning == DialogResult.No)
+                {
+                    this.Close();
+                }
+
             }
             else
             {
-                this.Close();
+                MessageBox.Show("Invalid format of the input!!", "New Student Warning Page", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-           
+
 
         }
 
