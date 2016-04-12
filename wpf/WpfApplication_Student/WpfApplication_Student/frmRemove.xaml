@@ -11,10 +11,10 @@
         <Label x:Name="label1" Content="First Name" HorizontalAlignment="Left" Margin="22,64,0,0" VerticalAlignment="Top" Height="28" Width="36"/>
         <Label x:Name="label2" Content="Last Name" HorizontalAlignment="Left" Margin="22,107,0,0" VerticalAlignment="Top" Height="28" Width="35"/>
         <Label x:Name="label3" Content="Department" HorizontalAlignment="Left" Margin="22,139,0,0" VerticalAlignment="Top" Height="27" Width="38"/>
-        <TextBox x:Name="txtStudentId" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="63" Margin="60,16,0,0" IsEnabled="False" TextChanged="textBox_TextChanged"/>
+        <TextBox x:Name="txtStudentId" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="63" Margin="60,16,0,0" IsEnabled="False" />
         <TextBox x:Name="txtFirstName" HorizontalAlignment="Left" Height="23" Margin="60,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="63" IsEnabled="False"/>
         <TextBox x:Name="txtLastName" HorizontalAlignment="Left" Height="23" Margin="60,107,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="63" IsEnabled="False"/>
-        <ComboBox x:Name="cmbDepartment" HorizontalAlignment="Left" VerticalAlignment="Top" Width="63" Margin="60,144,0,0" IsEnabled="False" SelectionChanged="comboBox_SelectionChanged" Height="22"/>
+        <ComboBox x:Name="cmbDepartment" HorizontalAlignment="Left" VerticalAlignment="Top" Width="63" Margin="60,144,0,0" IsEnabled="False" Height="22"/>
         <Label x:Name="label4" Content="Enrollment Type" HorizontalAlignment="Left" Margin="165,19,0,0" VerticalAlignment="Top" Width="77" Height="26"/>
         <RadioButton x:Name="btnFullTime" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="165,80,0,0" Width="45" Content="Full Time" IsEnabled="False" Height="15"/>
         <RadioButton x:Name="btnPartTime" Content="Part Time" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="165,122,0,0" IsEnabled="False" Height="15" Width="37"/>

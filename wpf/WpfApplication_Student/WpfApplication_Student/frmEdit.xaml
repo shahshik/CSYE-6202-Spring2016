@@ -8,25 +8,25 @@
         Title="frmEdit" Height="338.824" Width="439.412">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0*"/>
             <ColumnDefinition Width="164*"/>
-            <ColumnDefinition Width="3*"/>
             <ColumnDefinition Width="0*"/>
-            <ColumnDefinition Width="264*"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="267*"/>
         </Grid.ColumnDefinitions>
-        <Label x:Name="label" Content="StudentId" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="40,34,0,0" Height="24" Width="49" Grid.ColumnSpan="2"/>
-        <Label x:Name="label1" Content="First Name" HorizontalAlignment="Left" Margin="40,74,0,0" VerticalAlignment="Top" Height="25" Width="54" Grid.ColumnSpan="2"/>
-        <Label x:Name="label2" Content="Last Name" HorizontalAlignment="Left" Margin="40,104,0,0" VerticalAlignment="Top" Height="25" Width="53" Grid.ColumnSpan="2"/>
-        <Label x:Name="label3" Content="Department" HorizontalAlignment="Left" Margin="34,149,0,0" VerticalAlignment="Top" Height="24" Width="59" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="txtStudentId" HorizontalAlignment="Left" Height="22" TextWrapping="Wrap" VerticalAlignment="Top" Width="97" Margin="117,34,0,0" IsEnabled="False" TextChanged="textBox_TextChanged" Grid.ColumnSpan="5"/>
-        <TextBox x:Name="txtFirstName" HorizontalAlignment="Left" Height="21" Margin="117,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="97" IsEnabled="False" Grid.ColumnSpan="5"/>
-        <TextBox x:Name="txtLastName" HorizontalAlignment="Left" Height="21" Margin="117,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="97" IsEnabled="False" Grid.ColumnSpan="5"/>
-        <ComboBox x:Name="cmbDepartment" HorizontalAlignment="Left" VerticalAlignment="Top" Width="97" Margin="117,147,0,0" IsEnabled="False" SelectionChanged="comboBox_SelectionChanged" Height="20" Grid.ColumnSpan="5"/>
-        <Label x:Name="label4" Content="Enrollment Type" HorizontalAlignment="Left" Margin="111,10,0,0" VerticalAlignment="Top" Width="85" Height="23" Grid.Column="3" Grid.ColumnSpan="2"/>
-        <RadioButton x:Name="btnFullTime" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="111,42,0,0" Width="68" Content="Full Time" IsEnabled="False" Height="14" Grid.Column="3" Grid.ColumnSpan="2"/>
-        <RadioButton x:Name="btnPartTime" Content="Part Time" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="111,79,0,0" IsEnabled="False" Height="14" Width="56" Grid.Column="3" Grid.ColumnSpan="2"/>
-        <Button x:Name="button" Content="Update" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" Margin="94,196,0,0" Click="button_Click" Height="19" Grid.ColumnSpan="2"/>
-        <Button x:Name="button1" Content="Cancel" HorizontalAlignment="Left" Margin="35,196,0,0" VerticalAlignment="Top" Width="60" Click="button1_Click" Height="19" Grid.Column="3" Grid.ColumnSpan="2"/>
+        <Label x:Name="label" Content="StudentId" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="40,34,0,0" Height="24" Width="49"/>
+        <Label x:Name="label1" Content="First Name" HorizontalAlignment="Left" Margin="40,74,0,0" VerticalAlignment="Top" Height="25" Width="54"/>
+        <Label x:Name="label2" Content="Last Name" HorizontalAlignment="Left" Margin="40,104,0,0" VerticalAlignment="Top" Height="25" Width="53"/>
+        <Label x:Name="label3" Content="Department" HorizontalAlignment="Left" Margin="34,149,0,0" VerticalAlignment="Top" Height="24" Width="59"/>
+        <TextBox x:Name="txtStudentId" HorizontalAlignment="Left" Height="22" TextWrapping="Wrap" VerticalAlignment="Top" Width="97" Margin="117,34,0,0" IsEnabled="False" Grid.ColumnSpan="4"/>
+        <TextBox x:Name="txtFirstName" HorizontalAlignment="Left" Height="21" Margin="117,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="97" IsEnabled="False" Grid.ColumnSpan="4"/>
+        <TextBox x:Name="txtLastName" HorizontalAlignment="Left" Height="21" Margin="117,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="97" IsEnabled="False" Grid.ColumnSpan="4"/>
+
+        <ComboBox x:Name="cmbDepartment" HorizontalAlignment="Left"  Margin="117,151,0,0" VerticalAlignment="Top" Width="162" Grid.ColumnSpan="4" Height="22"/>
+        <Label x:Name="label4" Content="Enrollment Type" HorizontalAlignment="Left" Margin="108,10,0,0" VerticalAlignment="Top" Width="85" Height="23" Grid.Column="3"/>
+        <RadioButton x:Name="btnFullTime" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="108,42,0,0" Width="68" Content="Full Time" IsEnabled="False" Height="14" Grid.Column="3"/>
+        <RadioButton x:Name="btnPartTime" Content="Part Time" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="108,79,0,0" IsEnabled="False" Height="14" Width="56" Grid.Column="3"/>
+        <Button x:Name="button" Content="Update" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" Margin="94,196,0,0" Click="button_Click" Height="19"/>
+        <Button x:Name="button1" Content="Cancel" HorizontalAlignment="Left" Margin="32,196,0,0" VerticalAlignment="Top" Width="60" Click="button1_Click" Height="19" Grid.Column="3"/>
 
     </Grid>
 </Window>

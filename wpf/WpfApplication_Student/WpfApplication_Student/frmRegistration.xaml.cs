@@ -27,6 +27,7 @@ namespace WpfApplication_Student
         public event EventHandler DataChanged;
         public frmRegistration()
         {
+            randomStudentList = new List<Student>();
             InitializeComponent();
             Init();
         }
@@ -38,8 +39,12 @@ namespace WpfApplication_Student
         }
         private void LoadDepartments()
         {
-            cmbDepartment.Items.Add(new[] { "Information Systems", "International Affairs", "Nursing", "Pharmacy",
-                "Professional Studies", "Psychology", "Public Administration" });
+            departmentNames = new[] { "Information Systems", "International Affairs", "Nursing", "Pharmacy",
+                "Professional Studies", "Psychology", "Public Administration" };
+            foreach (string str in departmentNames)
+            {
+                cmbDepartment.Items.Add(str);
+            }
         }
         private void LoadDataGridWithMockData()
         {

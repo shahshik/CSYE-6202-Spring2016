@@ -15,7 +15,16 @@
         <Label x:Name="label" Content="Username" HorizontalAlignment="Left" Margin="173,90,0,0" VerticalAlignment="Top" Width="135" FontSize="20"/>
         <Button x:Name="button" Content="Sign" HorizontalAlignment="Left" Margin="51,350,0,0" VerticalAlignment="Top" Width="120" Height="24" Grid.Column="2" Click="button_Click"/>
         <Label x:Name="label1" Content="Password" HorizontalAlignment="Left" Margin="173,187,0,0" VerticalAlignment="Top" Height="40" RenderTransformOrigin="1.41,1.549" FontSize="20" Width="105"/>
-        <TextBox x:Name="txtUsername" HorizontalAlignment="Left" Height="23" Margin="51,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="2"/>
-        <TextBox x:Name="txtPassword" HorizontalAlignment="Left" Height="23" Margin="51,213,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="2"/>
+        <TextBox x:Name="txtUsername" HorizontalAlignment="Left" Height="37" Margin="51,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="270" Grid.Column="2"/>
+        <PasswordBox x:Name="passwordBox" Grid.Column="2" HorizontalAlignment="Left" Margin="51,188,0,0" VerticalAlignment="Top" Height="52" Width="268" >
+            <PasswordBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.142"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </PasswordBox.RenderTransform>
+        </PasswordBox>
     </Grid>
 </Window>
