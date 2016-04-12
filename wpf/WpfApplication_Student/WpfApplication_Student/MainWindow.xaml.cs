@@ -39,7 +39,7 @@ namespace WpfApplication_Student
 
                 logattempt = 0;
                 //MessageBox.Show("Welcome to the student registration portal!!", "Login Confirmation", MessageBoxButton.OK, MessageBoxImage.Information);
-                this.Hide();
+                //this.Hide();
                 f.Show();
             }
             else if (logattempt == 3)
