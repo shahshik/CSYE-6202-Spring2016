@@ -120,7 +120,7 @@ namespace WpfApplication_Student
         }
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            frmNew f1 = new frmNew(randomStudentList, departmentNames);
+            frmAdd f1 = new frmAdd(randomStudentList, departmentNames);
             f1.ShowDialog();
             ObservableCollection<Student> list = new ObservableCollection<Student>(randomStudentList);
             dataGridViewStudents.ItemsSource = null;

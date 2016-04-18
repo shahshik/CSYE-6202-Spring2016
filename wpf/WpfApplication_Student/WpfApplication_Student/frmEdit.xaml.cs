@@ -30,10 +30,19 @@ namespace WpfApplication_Student
             this.student = s;
             this.studentList = students;
             this.departmentNames = depttNames;
+
             txtStudentId.Text = student.StudentID;
             txtFirstName.Text = student.FirstName;
             txtLastName.Text = student.LastName;
             cmbDepartment.Text = student.Department;
+            btnFullTime.IsEnabled = true;
+            txtStudentId.IsEnabled = true;
+            cmbDepartment.IsEnabled = true;
+            txtFirstName.IsEnabled = true;
+            txtLastName.IsEnabled = true;
+            btnPartTime.IsEnabled = true;
+            btnFullTime.IsChecked = true;
+            btnPartTime.IsChecked = true;
             LoadDepartments();
             string dept = student.Department;
             cmbDepartment.SelectedIndex = 0;
@@ -56,8 +65,10 @@ namespace WpfApplication_Student
         }
         private void LoadDepartments()
         {
-            cmbDepartment.Items.Add(new[] { "Information Systems", "International Affairs", "Nursing", "Pharmacy",
-                "Professional Studies", "Psychology", "Public Administration" });
+            foreach (string str in departmentNames)
+            {
+                cmbDepartment.Items.Add(str);
+            }
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
@@ -82,6 +93,8 @@ namespace WpfApplication_Student
                     MessageBoxResult warning = MessageBox.Show("Are you sure you want to update this student?", "Edit Student Warning Page", MessageBoxButton.YesNo, MessageBoxImage.Information);
                     if (warning == MessageBoxResult.Yes)
                     {
+                        
+                        
                         student.StudentID = studentId;
                         student.FirstName = firstName;
                         student.LastName = lastName;

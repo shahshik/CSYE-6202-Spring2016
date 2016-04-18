@@ -18,18 +18,24 @@ namespace WpfApplication_Student
     /// <summary>
     /// Interaction logic for frmNew.xaml
     /// </summary>
-    public partial class frmNew : Window
+    public partial class frmAdd : Window
     {
         private List<Student> studentList;
         private string[] departmentNames;
         private bool isChanged = false;
-        public frmNew(List<Student> studentList, string[] departmentName)
+        public frmAdd(List<Student> studentList, string[] departmentName)
         {
             InitializeComponent();
             this.studentList = studentList;
             this.departmentNames = departmentName;
             LoadDepartments();
             btnFullTime.IsChecked = true;
+            btnFullTime.IsEnabled = true;
+            btnPartTime.IsEnabled = true;
+            txtStudentId.IsEnabled = true;
+            txtFirstName.IsEnabled = true;
+            txtLastName.IsEnabled = true;
+            cmbDepartment.IsEnabled = true;
             cmbDepartment.SelectedIndex = -1;
             if (isChanged)
             {
@@ -45,11 +51,14 @@ namespace WpfApplication_Student
         }
         private void LoadDepartments()
         {
-            cmbDepartment.Items.Add(new[] { "Information Systems", "International Affairs", "Nursing", "Pharmacy",
-                "Professional Studies", "Psychology", "Public Administration" });
+            foreach (string str in departmentNames)
+            {
+                cmbDepartment.Items.Add(str);
+            }
         }
 
-        private void button1_Click(object sender, RoutedEventArgs e)
+
+        private void btnReset_Click(object sender, RoutedEventArgs e)
         {
             btnFullTime.IsChecked = true;
             cmbDepartment.SelectedIndex = -1;
@@ -60,8 +69,10 @@ namespace WpfApplication_Student
             txtStudentId.Focus();
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
+            txtStudentId.Focus();
+            
             string studentId = txtStudentId.Text;
             string firstName = txtFirstName.Text;
             string lastName = txtLastName.Text;
