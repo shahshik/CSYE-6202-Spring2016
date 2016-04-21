@@ -16,5 +16,29 @@ namespace AirlineReservationSystem
         {
             InitializeComponent();
         }
+
+        private void frmSearchFlights_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'airlineReservationSystemDataSet1.InternationalAirports' table. You can move, or remove it, as needed.
+            this.internationalAirportsTableAdapter.Fill(this.airlineReservationSystemDataSet1.InternationalAirports);
+            // TODO: This line of code loads data into the 'airlineReservationSystemDataSet.DomesticAirports' table. You can move, or remove it, as needed.
+            this.domesticAirportsTableAdapter.Fill(this.airlineReservationSystemDataSet.DomesticAirports);
+
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox7_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

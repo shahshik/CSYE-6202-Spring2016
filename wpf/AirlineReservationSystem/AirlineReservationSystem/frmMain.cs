@@ -15,11 +15,30 @@ namespace AirlineReservationSystem
         public frmMain()
         {
             InitializeComponent();
+            frmLogin.ActiveForm.Visible = false;
         }
 
         private void bookingToolStripMenuItem_Click(object sender, EventArgs e)
         {
           
+        }
+
+        private void exitApplicationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmLogin.ActiveForm.Close();
+           
+        }
+
+        private void searchForFlightsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSearchFlights fSearch = new frmSearchFlights();
+            fSearch.Show(this);
+            fSearch.StartPosition = FormStartPosition.CenterParent;
+        }
+
+        private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            
         }
     }
 }
