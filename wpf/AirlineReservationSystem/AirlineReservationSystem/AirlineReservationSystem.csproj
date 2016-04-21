@@ -74,17 +74,41 @@
     <Compile Include="frmFlightDetails.Designer.cs">
       <DependentUpon>frmFlightDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmFlightMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFlightMaster.Designer.cs">
+      <DependentUpon>frmFlightMaster.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRate.Designer.cs">
+      <DependentUpon>frmRate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegisterAirport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegisterAirport.Designer.cs">
+      <DependentUpon>frmRegisterAirport.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSearchFlights.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmSearchFlights.Designer.cs">
       <DependentUpon>frmSearchFlights.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUserMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUserMaster.Designer.cs">
+      <DependentUpon>frmUserMaster.cs</DependentUpon>
     </Compile>
     <Compile Include="frmViewFlight.cs">
       <SubType>Form</SubType>
@@ -103,11 +127,23 @@
     <EmbeddedResource Include="frmFlightDetails.resx">
       <DependentUpon>frmFlightDetails.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmFlightMaster.resx">
+      <DependentUpon>frmFlightMaster.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmRate.resx">
+      <DependentUpon>frmRate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegisterAirport.resx">
+      <DependentUpon>frmRegisterAirport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSearchFlights.resx">
       <DependentUpon>frmSearchFlights.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUserMaster.resx">
+      <DependentUpon>frmUserMaster.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmViewFlight.resx">
       <DependentUpon>frmViewFlight.cs</DependentUpon>

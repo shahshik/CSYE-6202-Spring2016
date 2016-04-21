@@ -40,5 +40,10 @@ namespace AirlineReservationSystem
         {
             
         }
+
+        private void domesticToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
