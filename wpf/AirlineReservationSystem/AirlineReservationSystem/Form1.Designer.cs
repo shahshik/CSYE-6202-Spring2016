@@ -33,6 +33,8 @@
             this.btnLogin = new System.Windows.Forms.Button();
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
+            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblUserName
@@ -43,7 +45,6 @@
             this.lblUserName.Size = new System.Drawing.Size(55, 13);
             this.lblUserName.TabIndex = 0;
             this.lblUserName.Text = "Username";
-            this.lblUserName.Click += new System.EventHandler(this.lblUserName_Click);
             // 
             // lblPassword
             // 
@@ -70,7 +71,6 @@
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(148, 20);
             this.txtUserName.TabIndex = 3;
-            this.txtUserName.TextChanged += new System.EventHandler(this.txtUserName_TextChanged);
             // 
             // txtPassword
             // 
@@ -78,7 +78,11 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(148, 20);
             this.txtPassword.TabIndex = 4;
-            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
+            // 
+            // fileSystemWatcher1
+            // 
+            this.fileSystemWatcher1.EnableRaisingEvents = true;
+            this.fileSystemWatcher1.SynchronizingObject = this;
             // 
             // frmLogin
             // 
@@ -92,6 +96,7 @@
             this.Controls.Add(this.lblUserName);
             this.Name = "frmLogin";
             this.Text = "Login Form";
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -104,6 +109,7 @@
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.TextBox txtPassword;
+        private System.IO.FileSystemWatcher fileSystemWatcher1;
     }
 }
 
