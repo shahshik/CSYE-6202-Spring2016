@@ -28,103 +28,67 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblDDepart = new System.Windows.Forms.Label();
-            this.dtpDDepart = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtFlightNo = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtFlightName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtBusinessSeat = new System.Windows.Forms.TextBox();
+            this.txtEcoPlusSeat = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtEcoSeat = new System.Windows.Forms.TextBox();
+            this.txtSeatCapacity = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // lblDDepart
-            // 
-            this.lblDDepart.AutoSize = true;
-            this.lblDDepart.Location = new System.Drawing.Point(354, 36);
-            this.lblDDepart.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDDepart.Name = "lblDDepart";
-            this.lblDDepart.Size = new System.Drawing.Size(45, 16);
-            this.lblDDepart.TabIndex = 31;
-            this.lblDDepart.Text = "Date:";
-            // 
-            // dtpDDepart
-            // 
-            this.dtpDDepart.CustomFormat = "MM-dd-yyyy";
-            this.dtpDDepart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDDepart.Location = new System.Drawing.Point(357, 68);
-            this.dtpDDepart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dtpDDepart.Name = "dtpDDepart";
-            this.dtpDDepart.Size = new System.Drawing.Size(148, 22);
-            this.dtpDDepart.TabIndex = 29;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(84, 36);
+            this.label1.Location = new System.Drawing.Point(84, 44);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(25, 16);
+            this.label1.Size = new System.Drawing.Size(108, 16);
             this.label1.TabIndex = 32;
-            this.label1.Text = "Id:";
+            this.label1.Text = "Flight Number:";
             // 
-            // label2
+            // txtFlightNo
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(641, 36);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 16);
-            this.label2.TabIndex = 33;
-            this.label2.Text = "Destination:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(88, 68);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(148, 22);
-            this.textBox1.TabIndex = 34;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(640, 68);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(148, 22);
-            this.textBox2.TabIndex = 35;
+            this.txtFlightNo.Location = new System.Drawing.Point(224, 41);
+            this.txtFlightNo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFlightNo.Name = "txtFlightNo";
+            this.txtFlightNo.Size = new System.Drawing.Size(148, 22);
+            this.txtFlightNo.TabIndex = 34;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(640, 138);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox3.Location = new System.Drawing.Point(671, 138);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(148, 22);
             this.textBox3.TabIndex = 41;
             // 
-            // textBox4
+            // txtFlightName
             // 
-            this.textBox4.Location = new System.Drawing.Point(88, 138);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(148, 22);
-            this.textBox4.TabIndex = 40;
+            this.txtFlightName.Location = new System.Drawing.Point(224, 71);
+            this.txtFlightName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFlightName.Name = "txtFlightName";
+            this.txtFlightName.Size = new System.Drawing.Size(253, 22);
+            this.txtFlightName.TabIndex = 40;
             // 
             // label3
             // 
@@ -139,189 +103,239 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(84, 106);
+            this.label4.Location = new System.Drawing.Point(85, 74);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 16);
+            this.label4.Size = new System.Drawing.Size(95, 16);
             this.label4.TabIndex = 38;
-            this.label4.Text = "Name:";
+            this.label4.Text = "Flight Name:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(356, 106);
+            this.label5.Location = new System.Drawing.Point(757, 196);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(59, 16);
             this.label5.TabIndex = 37;
             this.label5.Text = "Carrier:";
             // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(640, 208);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(148, 22);
-            this.textBox5.TabIndex = 47;
-            // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(88, 208);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox6.Location = new System.Drawing.Point(584, 228);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(4);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(148, 22);
             this.textBox6.TabIndex = 46;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(636, 176);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(73, 16);
-            this.label6.TabIndex = 45;
-            this.label6.Text = "Capacity:";
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(85, 176);
+            this.label7.Location = new System.Drawing.Point(581, 196);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(168, 16);
             this.label7.TabIndex = 44;
             this.label7.Text = "Flight Crew Information:";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(354, 176);
+            this.label8.Location = new System.Drawing.Point(85, 104);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(52, 16);
+            this.label8.Size = new System.Drawing.Size(134, 16);
             this.label8.TabIndex = 43;
-            this.label8.Text = "Seats:";
+            this.label8.Text = "Seating Capacity :";
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(78, 239);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(15, 365);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(730, 119);
+            this.dataGridView1.Size = new System.Drawing.Size(888, 178);
             this.dataGridView1.TabIndex = 48;
             // 
-            // button1
+            // btnSave
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(124, 366);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(153, 41);
-            this.button1.TabIndex = 49;
-            this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Location = new System.Drawing.Point(137, 296);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(153, 41);
+            this.btnSave.TabIndex = 49;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // button2
+            // btnClear
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(574, 366);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(153, 41);
-            this.button2.TabIndex = 51;
-            this.button2.Text = "Clear";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Location = new System.Drawing.Point(587, 296);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(153, 41);
+            this.btnClear.TabIndex = 51;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnClose
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(357, 366);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(153, 41);
-            this.button4.TabIndex = 50;
-            this.button4.Text = "Close";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.Location = new System.Drawing.Point(370, 296);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(153, 41);
+            this.btnClose.TabIndex = 50;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = true;
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(359, 138);
+            this.textBox7.Location = new System.Drawing.Point(760, 228);
             this.textBox7.Margin = new System.Windows.Forms.Padding(4);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(148, 22);
             this.textBox7.TabIndex = 52;
-            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
-            // textBox8
+            // tableLayoutPanel1
             // 
-            this.textBox8.Location = new System.Drawing.Point(359, 208);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(148, 22);
-            this.textBox8.TabIndex = 53;
+            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 123F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 123F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 135F));
+            this.tableLayoutPanel1.Controls.Add(this.txtBusinessSeat, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.txtEcoPlusSeat, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label6, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label9, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label10, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.txtEcoSeat, 0, 1);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(88, 138);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(382, 74);
+            this.tableLayoutPanel1.TabIndex = 55;
+            // 
+            // txtBusinessSeat
+            // 
+            this.txtBusinessSeat.Location = new System.Drawing.Point(252, 40);
+            this.txtBusinessSeat.Name = "txtBusinessSeat";
+            this.txtBusinessSeat.Size = new System.Drawing.Size(104, 22);
+            this.txtBusinessSeat.TabIndex = 50;
+            // 
+            // txtEcoPlusSeat
+            // 
+            this.txtEcoPlusSeat.Location = new System.Drawing.Point(128, 40);
+            this.txtEcoPlusSeat.Name = "txtEcoPlusSeat";
+            this.txtEcoPlusSeat.Size = new System.Drawing.Size(104, 22);
+            this.txtEcoPlusSeat.TabIndex = 49;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(5, 1);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(115, 16);
+            this.label6.TabIndex = 45;
+            this.label6.Text = "Economy Class";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(129, 1);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(106, 16);
+            this.label9.TabIndex = 46;
+            this.label9.Text = "Economy Plus";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(253, 1);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(114, 16);
+            this.label10.TabIndex = 47;
+            this.label10.Text = "Business Class";
+            // 
+            // txtEcoSeat
+            // 
+            this.txtEcoSeat.AcceptsReturn = true;
+            this.txtEcoSeat.Location = new System.Drawing.Point(4, 40);
+            this.txtEcoSeat.Name = "txtEcoSeat";
+            this.txtEcoSeat.Size = new System.Drawing.Size(104, 22);
+            this.txtEcoSeat.TabIndex = 48;
+            // 
+            // txtSeatCapacity
+            // 
+            this.txtSeatCapacity.Location = new System.Drawing.Point(224, 103);
+            this.txtSeatCapacity.Name = "txtSeatCapacity";
+            this.txtSeatCapacity.Size = new System.Drawing.Size(104, 22);
+            this.txtSeatCapacity.TabIndex = 56;
             // 
             // frmFlightMaster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(921, 438);
-            this.Controls.Add(this.textBox8);
+            this.ClientSize = new System.Drawing.Size(921, 565);
+            this.Controls.Add(this.txtSeatCapacity);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtFlightName);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtFlightNo);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblDDepart);
-            this.Controls.Add(this.dtpDDepart);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmFlightMaster";
             this.Text = "frmFlightMaster";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblDDepart;
-        private System.Windows.Forms.DateTimePicker dtpDDepart;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtFlightNo;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtFlightName;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TextBox txtBusinessSeat;
+        private System.Windows.Forms.TextBox txtEcoPlusSeat;
+        private System.Windows.Forms.TextBox txtEcoSeat;
+        private System.Windows.Forms.TextBox txtSeatCapacity;
     }
 }

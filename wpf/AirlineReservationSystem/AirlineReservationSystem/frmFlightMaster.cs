@@ -17,14 +17,15 @@ namespace AirlineReservationSystem
             InitializeComponent();
         }
 
-        private void textBox7_TextChanged(object sender, EventArgs e)
+        private void btnSave_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
+            if (btnSave.Text == "Save")
+            {
+            }
+            else
+            {
+            }
+        
         }
     }
 }

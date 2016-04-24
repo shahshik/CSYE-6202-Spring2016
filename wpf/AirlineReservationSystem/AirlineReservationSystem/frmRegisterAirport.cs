@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
 
 namespace AirlineReservationSystem
 {
@@ -15,6 +16,15 @@ namespace AirlineReservationSystem
         public frmRegisterAirport()
         {
             InitializeComponent();
+            MessageBox.Show("testing");
+        }
+        private void btnSave_Click(object sender, EventArgs e)
+        {   if (btnSave.Text == "Save")
+            {
+            }
+            else
+            {
+            }
         }
     }
 }

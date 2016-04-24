@@ -40,10 +40,11 @@ namespace AirlineReservationSystem
         {
             
         }
-
-        private void domesticToolStripMenuItem_Click(object sender, EventArgs e)
+        private void airportMasterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmRegisterAirport fAirport = new frmRegisterAirport();
+            fAirport.Show(this);
+            fAirport.StartPosition = FormStartPosition.CenterParent;
         }
     }
 }

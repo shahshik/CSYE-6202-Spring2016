@@ -31,8 +31,6 @@
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.mastersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.airportMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.domesticToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.internationalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.flightMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.userMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rateMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,9 +40,7 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.menuStrip2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip2
@@ -72,42 +68,27 @@
             // 
             // airportMasterToolStripMenuItem
             // 
-            this.airportMasterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.domesticToolStripMenuItem,
-            this.internationalToolStripMenuItem});
             this.airportMasterToolStripMenuItem.Name = "airportMasterToolStripMenuItem";
-            this.airportMasterToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.airportMasterToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.airportMasterToolStripMenuItem.Text = "AirportMaster";
-            // 
-            // domesticToolStripMenuItem
-            // 
-            this.domesticToolStripMenuItem.Name = "domesticToolStripMenuItem";
-            this.domesticToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.domesticToolStripMenuItem.Text = "Domestic";
-            this.domesticToolStripMenuItem.Click += new System.EventHandler(this.domesticToolStripMenuItem_Click);
-            // 
-            // internationalToolStripMenuItem
-            // 
-            this.internationalToolStripMenuItem.Name = "internationalToolStripMenuItem";
-            this.internationalToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.internationalToolStripMenuItem.Text = "International";
+            this.airportMasterToolStripMenuItem.Click += new System.EventHandler(this.airportMasterToolStripMenuItem_Click);
             // 
             // flightMasterToolStripMenuItem
             // 
             this.flightMasterToolStripMenuItem.Name = "flightMasterToolStripMenuItem";
-            this.flightMasterToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.flightMasterToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.flightMasterToolStripMenuItem.Text = "FlightMaster";
             // 
             // userMasterToolStripMenuItem
             // 
             this.userMasterToolStripMenuItem.Name = "userMasterToolStripMenuItem";
-            this.userMasterToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.userMasterToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.userMasterToolStripMenuItem.Text = "UserMaster";
             // 
             // rateMasterToolStripMenuItem
             // 
             this.rateMasterToolStripMenuItem.Name = "rateMasterToolStripMenuItem";
-            this.rateMasterToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.rateMasterToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.rateMasterToolStripMenuItem.Text = "RateMaster";
             // 
             // transactionToolStripMenuItem
@@ -154,20 +135,11 @@
             this.exitApplicationToolStripMenuItem.Text = "Exit Application";
             this.exitApplicationToolStripMenuItem.Click += new System.EventHandler(this.exitApplicationToolStripMenuItem_Click);
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(40, 117);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(505, 190);
-            this.dataGridView1.TabIndex = 4;
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(605, 389);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip2);
             this.IsMdiContainer = true;
             this.KeyPreview = true;
@@ -177,7 +149,6 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -192,10 +163,7 @@
         private System.Windows.Forms.ToolStripMenuItem exitApplicationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem searchForFlightsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cancelBookingToolStripMenuItem;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ToolStripMenuItem airportMasterToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem domesticToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem internationalToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem flightMasterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem userMasterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rateMasterToolStripMenuItem;

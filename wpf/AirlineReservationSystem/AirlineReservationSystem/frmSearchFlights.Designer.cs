@@ -51,6 +51,10 @@
             this.rdoTrip1 = new System.Windows.Forms.RadioButton();
             this.rdoTrip = new System.Windows.Forms.RadioButton();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
+            this.comboBox9 = new System.Windows.Forms.ComboBox();
+            this.internationalAirportsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.airlineReservationSystemDataSet1 = new AirlineReservationSystem.AirlineReservationSystemDataSet1();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
@@ -70,21 +74,17 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.airlineReservationSystemDataSet = new AirlineReservationSystem.AirlineReservationSystemDataSet();
-            this.comboBox9 = new System.Windows.Forms.ComboBox();
             this.domesticAirportsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.domesticAirportsTableAdapter = new AirlineReservationSystem.AirlineReservationSystemDataSetTableAdapters.DomesticAirportsTableAdapter();
-            this.airlineReservationSystemDataSet1 = new AirlineReservationSystem.AirlineReservationSystemDataSet1();
-            this.internationalAirportsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.internationalAirportsTableAdapter = new AirlineReservationSystem.AirlineReservationSystemDataSet1TableAdapters.InternationalAirportsTableAdapter();
-            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.internationalAirportsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.airlineReservationSystemDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.airlineReservationSystemDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.domesticAirportsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.airlineReservationSystemDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.internationalAirportsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -324,6 +324,39 @@
             this.tabPage2.Text = "International";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(28, 339);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(172, 38);
+            this.button1.TabIndex = 52;
+            this.button1.Text = "Search Flights";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // comboBox9
+            // 
+            this.comboBox9.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.comboBox9.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBox9.DataSource = this.internationalAirportsBindingSource;
+            this.comboBox9.DisplayMember = "Airport_Name";
+            this.comboBox9.FormattingEnabled = true;
+            this.comboBox9.Location = new System.Drawing.Point(29, 113);
+            this.comboBox9.MaxDropDownItems = 10;
+            this.comboBox9.Name = "comboBox9";
+            this.comboBox9.Size = new System.Drawing.Size(218, 24);
+            this.comboBox9.TabIndex = 48;
+            this.comboBox9.ValueMember = "Airport_Id";
+            // 
+            // internationalAirportsBindingSource
+            // 
+            this.internationalAirportsBindingSource.DataMember = "InternationalAirports";
+            this.internationalAirportsBindingSource.DataSource = this.airlineReservationSystemDataSet1;
+            // 
+            // airlineReservationSystemDataSet1
+            // 
+            this.airlineReservationSystemDataSet1.DataSetName = "AirlineReservationSystemDataSet1";
+            this.airlineReservationSystemDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // comboBox4
             // 
             this.comboBox4.FormattingEnabled = true;
@@ -485,20 +518,6 @@
             this.airlineReservationSystemDataSet.DataSetName = "AirlineReservationSystemDataSet";
             this.airlineReservationSystemDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // comboBox9
-            // 
-            this.comboBox9.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.comboBox9.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox9.DataSource = this.internationalAirportsBindingSource;
-            this.comboBox9.DisplayMember = "Airport_Name";
-            this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Location = new System.Drawing.Point(29, 113);
-            this.comboBox9.MaxDropDownItems = 10;
-            this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(218, 24);
-            this.comboBox9.TabIndex = 48;
-            this.comboBox9.ValueMember = "Airport_Id";
-            // 
             // domesticAirportsBindingSource
             // 
             this.domesticAirportsBindingSource.DataMember = "DomesticAirports";
@@ -508,28 +527,9 @@
             // 
             this.domesticAirportsTableAdapter.ClearBeforeFill = true;
             // 
-            // airlineReservationSystemDataSet1
-            // 
-            this.airlineReservationSystemDataSet1.DataSetName = "AirlineReservationSystemDataSet1";
-            this.airlineReservationSystemDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // internationalAirportsBindingSource
-            // 
-            this.internationalAirportsBindingSource.DataMember = "InternationalAirports";
-            this.internationalAirportsBindingSource.DataSource = this.airlineReservationSystemDataSet1;
-            // 
             // internationalAirportsTableAdapter
             // 
             this.internationalAirportsTableAdapter.ClearBeforeFill = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(28, 339);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(172, 38);
-            this.button1.TabIndex = 52;
-            this.button1.Text = "Search Flights";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // frmSearchFlights
             // 
@@ -546,11 +546,11 @@
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.internationalAirportsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.airlineReservationSystemDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.airlineReservationSystemDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.domesticAirportsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.airlineReservationSystemDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.internationalAirportsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
