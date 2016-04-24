@@ -16,7 +16,7 @@ namespace Srudent_Registration
     {
         private List<Student> studentList;
         private string[] departmentNames;
-        public frmNewStudent()
+        public frmNewStudent(string[] departmentNames)
         {
             InitializeComponent();
             button1.Enabled = false;

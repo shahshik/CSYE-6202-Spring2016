@@ -16,7 +16,7 @@ namespace Srudent_Registration
         private List<Student> mockStudentList;
         Student s1 = new Student();
         private string[] departmentNames;
-
+        public delegate void NewStudentList(List<Student> studentList);
         public event EventHandler DataChanged;
 
         public frmRegistration()
@@ -117,10 +117,23 @@ namespace Srudent_Registration
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-          
-            Student selectedStudent = (Student)dataGridViewStudents.CurrentRow.DataBoundItem;
-            frmEdit f2 = new frmEdit(selectedStudent, mockStudentList, departmentNames);
-            f2.Show();
+            if (dataGridViewStudents.RowCount > 0)
+            {
+                Student selectedStudent = (Student)dataGridViewStudents.CurrentRow.DataBoundItem;
+                frmEdit eStudent = new frmEdit(selectedStudent, mockStudentList, departmentNames);
+                eStudent.ShowDialog();
+                var bindingList = new BindingList<Student>(mockStudentList);
+                var dataSource = new BindingSource(bindingList, null);
+                dataGridViewStudents.DataSource = null;
+                dataGridViewStudents.DataSource = dataSource;
+                SetColumnsInDataGrid();
+                btnFullTime.Select();
+                cmbDepartment.SelectedIndex = 0;
+            }
+            else
+            {
+                MessageBox.Show("Please select a student to edit from the list", "Student Update Warning");
+            }
         }
 
         private void frmRegistration_Load(object sender, EventArgs e)
@@ -130,8 +143,17 @@ namespace Srudent_Registration
 
         private void btnNew_Click(object sender, EventArgs e)
         {
-            frmNewStudent f1 = new frmNewStudent();
-            f1.Show();
+            frmNewStudent ns = new frmNewStudent(departmentNames);
+            NewStudentList sList = new NewStudentList(ns.GetStudentList);
+            sList(mockStudentList);
+            ns.ShowDialog();
+
+            var bindingList = new BindingList<Student>(mockStudentList);
+            var dataSource = new BindingSource(bindingList, null);
+            dataGridViewStudents.DataSource = null;
+            dataGridViewStudents.DataSource = dataSource;
+            SetColumnsInDataGrid();
+           
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -188,10 +210,24 @@ namespace Srudent_Registration
 
         private void btnRemove_Click(object sender, EventArgs e)
         {
-
-            Student selectedStudent = (Student)dataGridViewStudents.CurrentRow.DataBoundItem;
-            frmRemove f = new frmRemove(selectedStudent, mockStudentList);
-            f.ShowDialog(this);
+            if (dataGridViewStudents.RowCount > 0)
+            {
+                Student selectedStudent = (Student)dataGridViewStudents.CurrentRow.DataBoundItem;
+                frmRemove rsp = new frmRemove(selectedStudent, mockStudentList);
+                rsp.ShowDialog();
+                var bindingList = new BindingList<Student>(mockStudentList);
+                var dataSource = new BindingSource(bindingList, null);
+                dataGridViewStudents.DataSource = null;
+                dataGridViewStudents.DataSource = dataSource;
+                SetColumnsInDataGrid();
+                btnFullTime.Select();
+                cmbDepartment.SelectedIndex = 0;
+            }
+            else
+            {
+                MessageBox.Show("Please select a student to remove from the list", "Student Remove Warning");
+            }
+           
         }
     }
 }

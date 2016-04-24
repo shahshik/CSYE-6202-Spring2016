@@ -15,6 +15,7 @@ namespace Srudent_Registration
     {
         private Student student;
         private List<Student> studentList;
+        private string[] departmentName;
         private string v;
         public frmRemove(Student s, List<Student> sl)
         {
@@ -58,6 +59,12 @@ namespace Srudent_Registration
             {
                 this.Close();
             }
+        }
+
+        public void LoadDepttComboBox()
+        {
+            departmentName = new[] { "Information Systems", "International Affairs", "Nursing", "Pharmacy", "Professional Studies", "Psychology", "Public Administration" };
+            cmbDepartment.Items.AddRange(departmentName);
         }
 
         private void txtStudentId_TextChanged(object sender, EventArgs e)
