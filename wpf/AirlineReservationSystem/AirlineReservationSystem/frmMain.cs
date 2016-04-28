@@ -46,5 +46,19 @@ namespace AirlineReservationSystem
             fAirport.Show(this);
             fAirport.StartPosition = FormStartPosition.CenterParent;
         }
+
+        private void flightMasterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmFlightMaster f = new frmFlightMaster();
+            f.Show(this);
+            f.StartPosition = FormStartPosition.CenterParent;
+        }
+
+        private void rateMasterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRate fRate = new frmRate();
+            fRate.Show(this);
+            fRate.StartPosition = FormStartPosition.CenterParent;
+        }
     }
 }

@@ -69,27 +69,29 @@
             // airportMasterToolStripMenuItem
             // 
             this.airportMasterToolStripMenuItem.Name = "airportMasterToolStripMenuItem";
-            this.airportMasterToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.airportMasterToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.airportMasterToolStripMenuItem.Text = "AirportMaster";
             this.airportMasterToolStripMenuItem.Click += new System.EventHandler(this.airportMasterToolStripMenuItem_Click);
             // 
             // flightMasterToolStripMenuItem
             // 
             this.flightMasterToolStripMenuItem.Name = "flightMasterToolStripMenuItem";
-            this.flightMasterToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.flightMasterToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.flightMasterToolStripMenuItem.Text = "FlightMaster";
+            this.flightMasterToolStripMenuItem.Click += new System.EventHandler(this.flightMasterToolStripMenuItem_Click);
             // 
             // userMasterToolStripMenuItem
             // 
             this.userMasterToolStripMenuItem.Name = "userMasterToolStripMenuItem";
-            this.userMasterToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.userMasterToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.userMasterToolStripMenuItem.Text = "UserMaster";
             // 
             // rateMasterToolStripMenuItem
             // 
             this.rateMasterToolStripMenuItem.Name = "rateMasterToolStripMenuItem";
-            this.rateMasterToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.rateMasterToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.rateMasterToolStripMenuItem.Text = "RateMaster";
+            this.rateMasterToolStripMenuItem.Click += new System.EventHandler(this.rateMasterToolStripMenuItem_Click);
             // 
             // transactionToolStripMenuItem
             // 

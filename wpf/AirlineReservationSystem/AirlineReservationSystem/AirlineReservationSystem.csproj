@@ -64,6 +64,11 @@
     <Compile Include="Classes\Rate.cs" />
     <Compile Include="Classes\SeatingCapacity.cs" />
     <Compile Include="Classes\User.cs" />
+    <Compile Include="DAO\AirportDAO.cs" />
+    <Compile Include="DAO\FlightDAO.cs" />
+    <Compile Include="DAO\IDAO.cs" />
+    <Compile Include="DAO\NewCustomerDAO.cs" />
+    <Compile Include="DAO\RateDAO.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +80,18 @@
     </Compile>
     <Compile Include="frmCancelBooking.Designer.cs">
       <DependentUpon>frmCancelBooking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCustomerMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCustomerMain.Designer.cs">
+      <DependentUpon>frmCustomerMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCustomerRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCustomerRegistration.Designer.cs">
+      <DependentUpon>frmCustomerRegistration.cs</DependentUpon>
     </Compile>
     <Compile Include="frmFlightDetails.cs">
       <SubType>Form</SubType>
@@ -132,6 +149,12 @@
     <EmbeddedResource Include="frmCancelBooking.resx">
       <DependentUpon>frmCancelBooking.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCustomerMain.resx">
+      <DependentUpon>frmCustomerMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCustomerRegistration.resx">
+      <DependentUpon>frmCustomerRegistration.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmFlightDetails.resx">
       <DependentUpon>frmFlightDetails.cs</DependentUpon>
     </EmbeddedResource>
@@ -164,6 +187,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="AirlineReservationSystemDataSet.xsc">
       <DependentUpon>AirlineReservationSystemDataSet.xsd</DependentUpon>

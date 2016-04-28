@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace AirlineReservationSystem.Classes
 {
-    public class SeatingCapacity 
+    public class SeatingCapacity : Flight
     {
-        private Flight flightNo;
-        private string economyclass_no;
-        private string economyplus_no;
-        private string business;
+       
+        public String economyclass_no;
+        public String economyplus_no;
+        public String business;
 
     }
 }

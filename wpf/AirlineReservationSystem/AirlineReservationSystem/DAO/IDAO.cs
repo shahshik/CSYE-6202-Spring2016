@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AirlineReservationSystem.Classes
+namespace AirlineReservationSystem.DAO
 {
-    public class Admin : User
+    public interface IDAO
     {
+        int insertData();
     }
 }

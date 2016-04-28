@@ -3,13 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
+using System.Data.OleDb;
+using System.Data;
+using AirlineReservationSystem.Classes;
 
 namespace AirlineReservationSystem.Classes
 {
     public class Airport
     {
-        private string airport_code;
-        private string airport_name;
-        private Flight flight;
+        public String Airport_Code;
+        public String Airport_Name;
     }
+
 }

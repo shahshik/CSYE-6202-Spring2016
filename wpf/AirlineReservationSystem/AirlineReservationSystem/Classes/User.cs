@@ -8,9 +8,9 @@ namespace AirlineReservationSystem.Classes
 {
     public class User
     {
-        private string userId { get; set; }
-        private string password { get; set; }
-        private string userType { get; set; }
+        public String username; 
+        public String password;
+        //private string userType { get; set; }
 
     }
 }

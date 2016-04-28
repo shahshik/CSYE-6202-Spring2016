@@ -30,19 +30,19 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.txtFlightNo = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtCarrierInformation = new System.Windows.Forms.TextBox();
             this.txtFlightName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtFlightCrewInformation = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtCarrier = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.txtBusinessSeat = new System.Windows.Forms.TextBox();
             this.txtEcoPlusSeat = new System.Windows.Forms.TextBox();
@@ -74,13 +74,13 @@
             this.txtFlightNo.Size = new System.Drawing.Size(148, 22);
             this.txtFlightNo.TabIndex = 34;
             // 
-            // textBox3
+            // txtCarrierInformation
             // 
-            this.textBox3.Location = new System.Drawing.Point(671, 138);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(148, 22);
-            this.textBox3.TabIndex = 41;
+            this.txtCarrierInformation.Location = new System.Drawing.Point(639, 138);
+            this.txtCarrierInformation.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCarrierInformation.Name = "txtCarrierInformation";
+            this.txtCarrierInformation.Size = new System.Drawing.Size(180, 22);
+            this.txtCarrierInformation.TabIndex = 41;
             // 
             // txtFlightName
             // 
@@ -120,13 +120,13 @@
             this.label5.TabIndex = 37;
             this.label5.Text = "Carrier:";
             // 
-            // textBox6
+            // txtFlightCrewInformation
             // 
-            this.textBox6.Location = new System.Drawing.Point(584, 228);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(148, 22);
-            this.textBox6.TabIndex = 46;
+            this.txtFlightCrewInformation.Location = new System.Drawing.Point(584, 228);
+            this.txtFlightCrewInformation.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFlightCrewInformation.Name = "txtFlightCrewInformation";
+            this.txtFlightCrewInformation.Size = new System.Drawing.Size(148, 22);
+            this.txtFlightCrewInformation.TabIndex = 46;
             // 
             // label7
             // 
@@ -191,13 +191,13 @@
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
             // 
-            // textBox7
+            // txtCarrier
             // 
-            this.textBox7.Location = new System.Drawing.Point(760, 228);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(148, 22);
-            this.textBox7.TabIndex = 52;
+            this.txtCarrier.Location = new System.Drawing.Point(760, 228);
+            this.txtCarrier.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCarrier.Name = "txtCarrier";
+            this.txtCarrier.Size = new System.Drawing.Size(148, 22);
+            this.txtCarrier.TabIndex = 52;
             // 
             // tableLayoutPanel1
             // 
@@ -205,7 +205,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 123F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 123F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 135F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 136F));
             this.tableLayoutPanel1.Controls.Add(this.txtBusinessSeat, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtEcoPlusSeat, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label6, 0, 0);
@@ -286,15 +286,15 @@
             this.ClientSize = new System.Drawing.Size(921, 565);
             this.Controls.Add(this.txtSeatCapacity);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.txtCarrier);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.txtFlightCrewInformation);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtCarrierInformation);
             this.Controls.Add(this.txtFlightName);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
@@ -316,19 +316,19 @@
         #endregion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtFlightNo;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtCarrierInformation;
         private System.Windows.Forms.TextBox txtFlightName;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtFlightCrewInformation;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtCarrier;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
