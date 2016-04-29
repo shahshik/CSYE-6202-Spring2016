@@ -11,7 +11,7 @@ namespace AirlineReservationSystem.Classes
     public class Customer : User
     {
         //private String flightNo;{ get; set; }
-      
+        public String customerid;
         public String name;
         public String address;
         public String phoneNo;

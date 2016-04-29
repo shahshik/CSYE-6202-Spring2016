@@ -14,6 +14,7 @@ namespace AirlineReservationSystem.Classes
     {
         public String Airport_Code;
         public String Airport_Name;
+        public String @OldAirport_Code;
     }
 
 }

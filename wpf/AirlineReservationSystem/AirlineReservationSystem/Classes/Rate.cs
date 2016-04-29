@@ -8,8 +8,9 @@ namespace AirlineReservationSystem.Classes
 {
     public class Rate : SeatingCapacity
     {
-        public String rateId;
+        public String flightId;
         public String seatType;
         public String rate;
+        public String @OldFlightId;
     }
 }

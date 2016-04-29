@@ -58,12 +58,14 @@
     </Compile>
     <Compile Include="Classes\Admin.cs" />
     <Compile Include="Classes\Airport.cs" />
+    <Compile Include="Classes\Booking.cs" />
     <Compile Include="Classes\clsDatabase.cs" />
     <Compile Include="Classes\Customer.cs" />
     <Compile Include="Classes\Flight.cs" />
     <Compile Include="Classes\Rate.cs" />
     <Compile Include="Classes\SeatingCapacity.cs" />
-    <Compile Include="Classes\User.cs" />
+    <Compile Include="DAO\BookingDAO.cs" />
+    <Compile Include="User.cs" />
     <Compile Include="DAO\AirportDAO.cs" />
     <Compile Include="DAO\FlightDAO.cs" />
     <Compile Include="DAO\IDAO.cs" />
@@ -129,12 +131,6 @@
     <Compile Include="frmSearchFlights.Designer.cs">
       <DependentUpon>frmSearchFlights.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmUserMaster.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmUserMaster.Designer.cs">
-      <DependentUpon>frmUserMaster.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmViewFlight.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,9 +168,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSearchFlights.resx">
       <DependentUpon>frmSearchFlights.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmUserMaster.resx">
-      <DependentUpon>frmUserMaster.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmViewFlight.resx">
       <DependentUpon>frmViewFlight.cs</DependentUpon>

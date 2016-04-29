@@ -60,5 +60,20 @@ namespace AirlineReservationSystem
             fRate.Show(this);
             fRate.StartPosition = FormStartPosition.CenterParent;
         }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmLogin fLogin = new frmLogin();
+            fLogin.Show(this);
+            fLogin.StartPosition = FormStartPosition.CenterParent;
+
+        }
+
+        private void cancelBookingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCancelBooking frmCancel = new frmCancelBooking();
+            frmCancel.Show(this);
+            
+        }
     }
 }

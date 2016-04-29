@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AirlineReservationSystem.Classes;
+using AirlineReservationSystem.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,9 @@ namespace AirlineReservationSystem
 {
     public partial class frmSearchFlights : Form
     {
+
+        FlightDAO flightDAO = new FlightDAO();
+        Flight flight = new Flight();
         public frmSearchFlights()
         {
             InitializeComponent();
@@ -39,6 +44,18 @@ namespace AirlineReservationSystem
         private void comboBox7_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnSearchFlight_Click(object sender, EventArgs e)
+        {
+            flightDAO.searchFlight(flight);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmViewFlight fView = new frmViewFlight();
+            fView.Show(this);
+            fView.StartPosition = FormStartPosition.CenterParent;
         }
     }
 }

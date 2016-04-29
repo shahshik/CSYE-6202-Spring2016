@@ -8,10 +8,25 @@ namespace AirlineTest
     public class UnitTest1
     {
         [Test]
-        public void WhenLoggingIn()
+       
+        public void When_UserEnterName_NullValueEnter_ResultShouldBeFalse()
         {
-            //var sender = class.send();
-            //Assert.IsInstanceOf(String,sender);
+            //prepare
+            var expected = false;
+            //action
+            var actual = CustomerRegistration.userEnteredNameValid("");
+            //assert
+            NUnit.Framework.Assert.That(expected, Is.EqualTo(actual));
+        }
+
+        public void When_UserEnterPhoneNo_ProperFormat_ResultShouldBeFalse()
+        {
+            //prepare
+            var expected = false;
+            //action
+            var actual = CustomerRegistration.userEnteredPhoneNoValid("");
+            //assert
+            NUnit.Framework.Assert.That(expected, Is.EqualTo(actual));
         }
     }
 }

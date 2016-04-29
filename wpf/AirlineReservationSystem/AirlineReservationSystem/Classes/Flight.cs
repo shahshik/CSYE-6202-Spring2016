@@ -9,11 +9,13 @@ namespace AirlineReservationSystem.Classes
     public class Flight
     {
         public String flightNo;
+        public String oldflightNo;
         public String flightName;
-        public int seatingCapacity;
+        public String seatingCapacity;
         public String carrierInformation;
         public String flightCrewInformation;
         public String carrier;
-        
+        public String source;
+        public String destination;
     }
 }

@@ -32,13 +32,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtFlightId = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dvRate = new System.Windows.Forms.DataGridView();
             this.txtRate = new System.Windows.Forms.TextBox();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
             this.cmbSeatType = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnNew = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dvRate)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -78,13 +79,15 @@
             this.txtFlightId.Size = new System.Drawing.Size(141, 20);
             this.txtFlightId.TabIndex = 3;
             // 
-            // dataGridView1
+            // dvRate
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(26, 107);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(513, 150);
-            this.dataGridView1.TabIndex = 6;
+            this.dvRate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvRate.Location = new System.Drawing.Point(26, 107);
+            this.dvRate.Name = "dvRate";
+            this.dvRate.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dvRate.Size = new System.Drawing.Size(513, 150);
+            this.dvRate.TabIndex = 6;
+            this.dvRate.SelectionChanged += new System.EventHandler(this.dvRate_SelectionChanged);
             // 
             // txtRate
             // 
@@ -92,37 +95,6 @@
             this.txtRate.Name = "txtRate";
             this.txtRate.Size = new System.Drawing.Size(141, 20);
             this.txtRate.TabIndex = 8;
-            // 
-            // btnSave
-            // 
-            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(71, 263);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(102, 33);
-            this.btnSave.TabIndex = 34;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnClear
-            // 
-            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(371, 263);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(102, 33);
-            this.btnClear.TabIndex = 36;
-            this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
-            // 
-            // btnClose
-            // 
-            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Location = new System.Drawing.Point(226, 263);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(102, 33);
-            this.btnClose.TabIndex = 35;
-            this.btnClose.Text = "Close";
-            this.btnClose.UseVisualStyleBackColor = true;
             // 
             // cmbSeatType
             // 
@@ -132,24 +104,69 @@
             this.cmbSeatType.Size = new System.Drawing.Size(147, 21);
             this.cmbSeatType.TabIndex = 37;
             // 
+            // btnDelete
+            // 
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Location = new System.Drawing.Point(455, 277);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(102, 33);
+            this.btnDelete.TabIndex = 41;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Location = new System.Drawing.Point(4, 277);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(102, 33);
+            this.btnSave.TabIndex = 38;
+            this.btnSave.Text = "Update";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click_1);
+            // 
+            // btnNew
+            // 
+            this.btnNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNew.Location = new System.Drawing.Point(304, 277);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(102, 33);
+            this.btnNew.TabIndex = 40;
+            this.btnNew.Text = "New";
+            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.Location = new System.Drawing.Point(146, 277);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(102, 33);
+            this.btnClose.TabIndex = 39;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // frmRate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(562, 334);
-            this.Controls.Add(this.cmbSeatType);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.btnNew);
             this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.cmbSeatType);
             this.Controls.Add(this.txtRate);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dvRate);
             this.Controls.Add(this.txtFlightId);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmRate";
             this.Text = "frmRate";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvRate)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -161,11 +178,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtFlightId;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dvRate;
         private System.Windows.Forms.TextBox txtRate;
-        private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.ComboBox cmbSeatType;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnNew;
+        private System.Windows.Forms.Button btnClose;
     }
 }

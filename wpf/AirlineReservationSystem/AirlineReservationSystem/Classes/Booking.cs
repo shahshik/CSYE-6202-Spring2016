@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace AirlineReservationSystem.Classes
 {
-    public class SeatingCapacity : Flight
+    public class Booking
     {
-        
-        public String economyclass_no;
-        public String economyplus_no;
-        public String business;
-
+        public String flightNo;
+        public String flightName;
+        public String Status = "Cancel";
+        public String @OldStatus = "Booked";
     }
 }

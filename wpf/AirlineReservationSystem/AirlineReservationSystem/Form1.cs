@@ -24,7 +24,7 @@ namespace AirlineReservationSystem
         }
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (txtUserName.Text.Equals("admin") && txtPassword.Text.Equals("admin"))
+           /* if (txtUserName.Text.Equals("admin") && txtPassword.Text.Equals("admin"))
             {
                 //MessageBox.Show("Login Successfull !!", "Airline Reservation System", MessageBoxButtons.OKCancel);
                 //this.Close();
@@ -33,11 +33,14 @@ namespace AirlineReservationSystem
 
             }
             else {
+                MessageBox.Show("Login UnSuccessfull !!", "Airline Reservation System", MessageBoxButtons.OKCancel);
+            }*/
+
                 if (txtUserName.Text != "" && txtPassword.Text != "")
                 {
                     cDb.ConnectDatabase();
 
-                    int count = cDb.GetDataCount("select count(*) from usermaster where c_userid='" + txtUserName.Text + "' and c_password='" + txtPassword.Text + "'");
+                    int count = cDb.GetDataCount("select count(*) from usermaster where c_username='" + txtUserName.Text + "' and c_password='" + txtPassword.Text + "'");
                     if (count == 0)
                     {
                         MessageBox.Show("Invalid Username Or Password !!", "Airline Reservation System", MessageBoxButtons.OKCancel);
@@ -50,13 +53,15 @@ namespace AirlineReservationSystem
                         fmain.Show();
 
                     }
+
                 }
                 else
                 {
                     MessageBox.Show("You Have Not Entered Username Or Password !!", "Airline Reservation System", MessageBoxButtons.OKCancel);
                 }
 
-            }
+            
+            
         }
 
         private void btnSignUp_Click(object sender, EventArgs e)

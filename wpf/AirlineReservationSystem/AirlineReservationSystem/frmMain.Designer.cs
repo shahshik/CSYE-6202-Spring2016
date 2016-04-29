@@ -32,7 +32,6 @@
             this.mastersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.airportMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.flightMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.userMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rateMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.transactionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchForFlightsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -60,7 +59,6 @@
             this.mastersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.airportMasterToolStripMenuItem,
             this.flightMasterToolStripMenuItem,
-            this.userMasterToolStripMenuItem,
             this.rateMasterToolStripMenuItem});
             this.mastersToolStripMenuItem.Name = "mastersToolStripMenuItem";
             this.mastersToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
@@ -69,27 +67,21 @@
             // airportMasterToolStripMenuItem
             // 
             this.airportMasterToolStripMenuItem.Name = "airportMasterToolStripMenuItem";
-            this.airportMasterToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.airportMasterToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.airportMasterToolStripMenuItem.Text = "AirportMaster";
             this.airportMasterToolStripMenuItem.Click += new System.EventHandler(this.airportMasterToolStripMenuItem_Click);
             // 
             // flightMasterToolStripMenuItem
             // 
             this.flightMasterToolStripMenuItem.Name = "flightMasterToolStripMenuItem";
-            this.flightMasterToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.flightMasterToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.flightMasterToolStripMenuItem.Text = "FlightMaster";
             this.flightMasterToolStripMenuItem.Click += new System.EventHandler(this.flightMasterToolStripMenuItem_Click);
-            // 
-            // userMasterToolStripMenuItem
-            // 
-            this.userMasterToolStripMenuItem.Name = "userMasterToolStripMenuItem";
-            this.userMasterToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.userMasterToolStripMenuItem.Text = "UserMaster";
             // 
             // rateMasterToolStripMenuItem
             // 
             this.rateMasterToolStripMenuItem.Name = "rateMasterToolStripMenuItem";
-            this.rateMasterToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.rateMasterToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.rateMasterToolStripMenuItem.Text = "RateMaster";
             this.rateMasterToolStripMenuItem.Click += new System.EventHandler(this.rateMasterToolStripMenuItem_Click);
             // 
@@ -114,6 +106,7 @@
             this.cancelBookingToolStripMenuItem.Name = "cancelBookingToolStripMenuItem";
             this.cancelBookingToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.cancelBookingToolStripMenuItem.Text = "Cancel Booking";
+            this.cancelBookingToolStripMenuItem.Click += new System.EventHandler(this.cancelBookingToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
@@ -129,6 +122,7 @@
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
             this.logoutToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.logoutToolStripMenuItem.Text = "Logout";
+            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
             // exitApplicationToolStripMenuItem
             // 
@@ -167,7 +161,6 @@
         private System.Windows.Forms.ToolStripMenuItem cancelBookingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem airportMasterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem flightMasterToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem userMasterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rateMasterToolStripMenuItem;
     }
 }
